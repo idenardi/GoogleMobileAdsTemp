@@ -13,10 +13,12 @@
 
   <!-- From https://developers.google.com/admob/ios/download version 11.10.0 -->
   <ItemGroup>
-    <NativeReference Include="..\native\GoogleMobileAdsSdkiOS-11.10.0\UserMessagingPlatform.xcframework">
+    <NativeReference Include="..\..\native\GoogleMobileAdsSdkiOS-11.10.0\GoogleMobileAds.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>True</SmartLink>
       <ForceLoad>True</ForceLoad>
+      <Frameworks>AudioToolbox AVFoundation CFNetwork CoreGraphics CoreMedia CoreTelephony CoreVideo MediaPlayer MessageUI MobileCoreServices QuartzCore Security StoreKit SystemConfiguration</Frameworks>
+      <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>
     </NativeReference>
   </ItemGroup>
 </Project>
