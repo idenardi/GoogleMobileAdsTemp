@@ -1,113 +1,110 @@
+using System;
+using System.Collections.Generic;
+
 using Foundation;
 using ObjCRuntime;
-using UserMessagingPlatform;
 
-// typedef void (^UMPConsentFormLoadCompletionHandler)(UMPConsentForm * _Nullable, int * _Nullable);
-unsafe delegate void UMPConsentFormLoadCompletionHandler ([NullAllowed] UMPConsentForm arg0, [NullAllowed] int* arg1);
-
-// typedef void (^UMPConsentFormPresentCompletionHandler)(int * _Nullable);
-unsafe delegate void UMPConsentFormPresentCompletionHandler ([NullAllowed] int* arg0);
-
-// @interface UMPConsentForm
-interface UMPConsentForm
+namespace Google.UserMessagingPlatform
 {
-	// +(void)loadWithCompletionHandler:(UMPConsentFormLoadCompletionHandler _Nonnull)completionHandler;
-	[Static]
-	[Export ("loadWithCompletionHandler:")]
-	void LoadWithCompletionHandler (UMPConsentFormLoadCompletionHandler completionHandler);
+    // typedef void (^UMPConsentFormLoadCompletionHandler)(UMPConsentForm * _Nullable, NSError * _Nullable);
+    delegate void ConsentFormLoadCompletionHandler([NullAllowed] ConsentForm consentForm, [NullAllowed] NSError error);
 
-	// +(void)loadAndPresentIfRequiredFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
-	[Static]
-	[Export ("loadAndPresentIfRequiredFromViewController:completionHandler:")]
-	void LoadAndPresentIfRequiredFromViewController (NSObject viewController, [NullAllowed] UMPConsentFormPresentCompletionHandler completionHandler);
+    // typedef void (^UMPConsentFormPresentCompletionHandler)(NSError * _Nullable);
+    delegate void ConsentFormPresentCompletionHandler([NullAllowed] NSError error);
 
-	// +(void)presentPrivacyOptionsFormFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
-	[Static]
-	[Export ("presentPrivacyOptionsFormFromViewController:completionHandler:")]
-	void PresentPrivacyOptionsFormFromViewController (NSObject viewController, [NullAllowed] UMPConsentFormPresentCompletionHandler completionHandler);
+    // typedef void (^UMPConsentInformationUpdateCompletionHandler)(NSError * _Nullable);
+    delegate void ConsentInformationUpdateCompletionHandler([NullAllowed] NSError error);
 
-	// -(void)presentFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
-	[Export ("presentFromViewController:completionHandler:")]
-	void PresentFromViewController (NSObject viewController, [NullAllowed] UMPConsentFormPresentCompletionHandler completionHandler);
-}
+    // @interface UMPConsentForm
+    [DisableDefaultCtor]
+    [BaseType(typeof(NSObject), Name = "UMPConsentForm")]
+    interface ConsentForm
+    {
+        // +(void)loadWithCompletionHandler:(UMPConsentFormLoadCompletionHandler _Nonnull)completionHandler;
+        [Static]
+        [Export("loadWithCompletionHandler:")]
+        void LoadWithCompletionHandler(ConsentFormLoadCompletionHandler completionHandler);
 
-[Static]
-[Verify (ConstantsInterfaceAssociation)]
-partial interface Constants
-{
-	// extern NSString *const _Nonnull UMPVersionString;
-	[Field ("UMPVersionString", "__Internal")]
-	NSString UMPVersionString { get; }
-}
+        // +(void)loadAndPresentIfRequiredFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
+        [Static]
+        [Export("loadAndPresentIfRequiredFromViewController:completionHandler:")]
+        void LoadAndPresentIfRequiredFromViewController(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
 
-// typedef void (^UMPConsentInformationUpdateCompletionHandler)(NSError * _Nullable);
-delegate void UMPConsentInformationUpdateCompletionHandler ([NullAllowed] NSError arg0);
+        // +(void)presentPrivacyOptionsFormFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
+        [Static]
+        [Export("presentPrivacyOptionsFormFromViewController:completionHandler:")]
+        void PresentPrivacyOptionsFormFromViewController(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
 
-// @interface UMPConsentInformation : NSObject
-[BaseType (typeof(NSObject))]
-interface UMPConsentInformation
-{
-	// @property (readonly, nonatomic, class) UMPConsentInformation * _Nonnull sharedInstance;
-	[Static]
-	[Export ("sharedInstance")]
-	UMPConsentInformation SharedInstance { get; }
+        // -(void)presentFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
+        [Export("presentFromViewController:completionHandler:")]
+        void PresentFromViewController(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
+    }
 
-	// @property (readonly, nonatomic) UMPConsentStatus consentStatus;
-	[Export ("consentStatus")]
-	UMPConsentStatus ConsentStatus { get; }
+    // @interface UMPConsentInformation : NSObject
+    [BaseType(typeof(NSObject), Name = "UMPConsentInformation")]
+    interface ConsentInformation
+    {
+        // @property (readonly, nonatomic, class) UMPConsentInformation * _Nonnull sharedInstance;
+        [Static]
+        [Export("sharedInstance")]
+        ConsentInformation SharedInstance { get; }
 
-	// @property (readonly, nonatomic) BOOL canRequestAds;
-	[Export ("canRequestAds")]
-	bool CanRequestAds { get; }
+        // extern NSString *const _Nonnull UMPVersionString;
+        [Field("UMPVersionString", "__Internal")]
+        NSString UMPVersionString { get; }
 
-	// @property (readonly, nonatomic) UMPFormStatus formStatus;
-	[Export ("formStatus")]
-	UMPFormStatus FormStatus { get; }
+        // extern NSErrorDomain  _Nonnull const UMPErrorDomain;
+        [Field("UMPErrorDomain", "__Internal")]
+        NSString UMPErrorDomain { get; }
 
-	// @property (readonly, nonatomic) UMPPrivacyOptionsRequirementStatus privacyOptionsRequirementStatus;
-	[Export ("privacyOptionsRequirementStatus")]
-	UMPPrivacyOptionsRequirementStatus PrivacyOptionsRequirementStatus { get; }
+        // @property (readonly, nonatomic) UMPConsentStatus consentStatus;
+        [Export("consentStatus")]
+        ConsentStatus ConsentStatus { get; }
 
-	// -(void)requestConsentInfoUpdateWithParameters:(id)parameters completionHandler:(UMPConsentInformationUpdateCompletionHandler _Nonnull)handler;
-	[Export ("requestConsentInfoUpdateWithParameters:completionHandler:")]
-	void RequestConsentInfoUpdateWithParameters (NSObject parameters, UMPConsentInformationUpdateCompletionHandler handler);
+        // @property (readonly, nonatomic) BOOL canRequestAds;
+        [Export("canRequestAds")]
+        bool CanRequestAds { get; }
 
-	// -(void)reset;
-	[Export ("reset")]
-	void Reset ();
-}
+        // @property (readonly, nonatomic) UMPFormStatus formStatus;
+        [Export("formStatus")]
+        FormStatus FormStatus { get; }
 
-// @interface UMPDebugSettings : NSObject <NSCopying>
-[BaseType (typeof(NSObject))]
-interface UMPDebugSettings : INSCopying
-{
-	// @property (copy, nonatomic) NSArray<NSString *> * _Nullable testDeviceIdentifiers;
-	[NullAllowed, Export ("testDeviceIdentifiers", ArgumentSemantic.Copy)]
-	string[] TestDeviceIdentifiers { get; set; }
+        // @property (readonly, nonatomic) UMPPrivacyOptionsRequirementStatus privacyOptionsRequirementStatus;
+        [Export("privacyOptionsRequirementStatus")]
+        PrivacyOptionsRequirementStatus PrivacyOptionsRequirementStatus { get; }
 
-	// @property (nonatomic) UMPDebugGeography geography;
-	[Export ("geography", ArgumentSemantic.Assign)]
-	UMPDebugGeography Geography { get; set; }
-}
+        // -(void)requestConsentInfoUpdateWithParameters:(id)parameters completionHandler:(UMPConsentInformationUpdateCompletionHandler _Nonnull)handler;
+        [Export("requestConsentInfoUpdateWithParameters:completionHandler:")]
+        void RequestConsentInfoUpdateWithParameters(NSObject parameters, ConsentInformationUpdateCompletionHandler handler);
 
-[Static]
-[Verify (ConstantsInterfaceAssociation)]
-partial interface Constants
-{
-	// extern NSErrorDomain  _Nonnull const UMPErrorDomain;
-	[Field ("UMPErrorDomain", "__Internal")]
-	NSString UMPErrorDomain { get; }
-}
+        // -(void)reset;
+        [Export("reset")]
+        void Reset();
+    }
 
-// @interface UMPRequestParameters : NSObject <NSCopying>
-[BaseType (typeof(NSObject))]
-interface UMPRequestParameters : INSCopying
-{
-	// @property (nonatomic) BOOL tagForUnderAgeOfConsent;
-	[Export ("tagForUnderAgeOfConsent")]
-	bool TagForUnderAgeOfConsent { get; set; }
+    // @interface UMPDebugSettings : NSObject <NSCopying>
+    [BaseType(typeof(NSObject), Name = "UMPDebugSettings")]
+    interface DebugSettings : INSCopying
+    {
+        // @property (copy, nonatomic) NSArray<NSString *> * _Nullable testDeviceIdentifiers;
+        [NullAllowed, Export("testDeviceIdentifiers", ArgumentSemantic.Copy)]
+        string[] TestDeviceIdentifiers { get; set; }
 
-	// @property (copy, nonatomic) UMPDebugSettings * _Nullable debugSettings;
-	[NullAllowed, Export ("debugSettings", ArgumentSemantic.Copy)]
-	UMPDebugSettings DebugSettings { get; set; }
+        // @property (nonatomic) UMPDebugGeography geography;
+        [Export("geography", ArgumentSemantic.Assign)]
+        DebugGeography Geography { get; set; }
+    }
+
+    // @interface UMPRequestParameters : NSObject <NSCopying>
+    [BaseType(typeof(NSObject), Name = "UMPRequestParameters")]
+    interface RequestParameters : INSCopying
+    {
+        // @property (nonatomic) BOOL tagForUnderAgeOfConsent;
+        [Export("tagForUnderAgeOfConsent")]
+        bool TagForUnderAgeOfConsent { get; set; }
+
+        // @property (copy, nonatomic) UMPDebugSettings * _Nullable debugSettings;
+        [NullAllowed, Export("debugSettings", ArgumentSemantic.Copy)]
+        DebugSettings DebugSettings { get; set; }
+    }
 }
