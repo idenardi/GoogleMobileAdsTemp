@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Foundation;
 using ObjCRuntime;
 
-namespace Google.UserMessagingPlatform
+namespace Maui.Google.UserMessagingPlatform
 {
     // typedef void (^UMPConsentFormLoadCompletionHandler)(UMPConsentForm * _Nullable, NSError * _Nullable);
     delegate void ConsentFormLoadCompletionHandler([NullAllowed] ConsentForm consentForm, [NullAllowed] NSError error);

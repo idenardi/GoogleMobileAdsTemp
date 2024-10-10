@@ -1,7 +1,7 @@
 using Foundation;
 using ObjCRuntime;
 
-namespace Google.UserMessagingPlatform
+namespace Maui.Google.UserMessagingPlatform
 {
 	[Native]
 	public enum ConsentStatus : long

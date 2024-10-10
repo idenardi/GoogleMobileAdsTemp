@@ -5,6 +5,9 @@
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ApiDefinitionsTemp.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
@@ -20,5 +23,8 @@
       <Frameworks>AudioToolbox AVFoundation CFNetwork CoreGraphics CoreMedia CoreTelephony CoreVideo MediaPlayer MessageUI MobileCoreServices QuartzCore Security StoreKit SystemConfiguration</Frameworks>
       <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ApiDefinitionsTemp.cs" />
   </ItemGroup>
 </Project>
