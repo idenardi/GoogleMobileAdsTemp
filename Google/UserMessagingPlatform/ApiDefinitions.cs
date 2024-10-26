@@ -23,21 +23,21 @@ namespace Maui.Google.UserMessagingPlatform
         // +(void)loadWithCompletionHandler:(UMPConsentFormLoadCompletionHandler _Nonnull)completionHandler;
         [Static]
         [Export("loadWithCompletionHandler:")]
-        void LoadWithCompletionHandler(ConsentFormLoadCompletionHandler completionHandler);
+        void Load(ConsentFormLoadCompletionHandler completionHandler);
 
         // +(void)loadAndPresentIfRequiredFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
         [Static]
         [Export("loadAndPresentIfRequiredFromViewController:completionHandler:")]
-        void LoadAndPresentIfRequiredFromViewController(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
+        void LoadAndPresentIfRequired(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
 
         // +(void)presentPrivacyOptionsFormFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
         [Static]
         [Export("presentPrivacyOptionsFormFromViewController:completionHandler:")]
-        void PresentPrivacyOptionsFormFromViewController(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
+        void PresentPrivacyOptionsForm(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
 
         // -(void)presentFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
         [Export("presentFromViewController:completionHandler:")]
-        void PresentFromViewController(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
+        void Present(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
     }
 
     // @interface UMPConsentInformation : NSObject
@@ -75,7 +75,7 @@ namespace Maui.Google.UserMessagingPlatform
 
         // -(void)requestConsentInfoUpdateWithParameters:(id)parameters completionHandler:(UMPConsentInformationUpdateCompletionHandler _Nonnull)handler;
         [Export("requestConsentInfoUpdateWithParameters:completionHandler:")]
-        void RequestConsentInfoUpdateWithParameters(NSObject parameters, ConsentInformationUpdateCompletionHandler handler);
+        void RequestConsentInfoUpdate(RequestParameters parameters, ConsentInformationUpdateCompletionHandler handler);
 
         // -(void)reset;
         [Export("reset")]
