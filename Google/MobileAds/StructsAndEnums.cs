@@ -4,8 +4,10 @@ using System.Runtime.InteropServices;
 using CoreGraphics;
 using Foundation;
 using ObjCRuntime;
+using UIKit;
+using WebKit;
 
-namespace Google.MobileAds
+namespace Maui.Google.MobileAds
 {
 	[Native]
 	public enum AdChoicesPosition : long
