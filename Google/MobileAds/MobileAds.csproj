@@ -5,9 +5,6 @@
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="ApiDefinitionsTemp.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
@@ -25,6 +22,6 @@
     </NativeReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ApiDefinitionsTemp.cs" />
+    <None Include="Extensions.cs" />
   </ItemGroup>
 </Project>
