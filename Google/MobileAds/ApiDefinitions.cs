@@ -8,6 +8,22 @@ using WebKit;
 
 namespace Maui.Google.MobileAds
 {
+    [Static]
+    interface AdLoaderAdTypeConstants
+    {
+        // extern GADAdLoaderAdType  _Nonnull const GADAdLoaderAdTypeCustomNative;
+        [Field("GADAdLoaderAdTypeCustomNative", "__Internal")]
+        NSString CustomNative { get; }
+
+        // extern GADAdLoaderAdType  _Nonnull const GADAdLoaderAdTypeGAMBanner;
+        [Field("GADAdLoaderAdTypeGAMBanner", "__Internal")]
+        NSString GamBanner { get; }
+
+        // extern GADAdLoaderAdType  _Nonnull const GADAdLoaderAdTypeNative;
+        [Field("GADAdLoaderAdTypeNative", "__Internal")]
+        NSString Native { get; }
+    }
+
     // @interface GADAdChoicesView : UIView
     [BaseType(typeof(UIView), Name = "GADAdChoicesView")]
     interface AdChoicesView
