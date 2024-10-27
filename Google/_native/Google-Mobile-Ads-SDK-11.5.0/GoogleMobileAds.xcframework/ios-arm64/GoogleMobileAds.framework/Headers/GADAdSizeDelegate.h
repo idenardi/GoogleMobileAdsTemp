@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADAdSize.h>
+#import "GADAdSize.h"
 
 @class GADBannerView;
 

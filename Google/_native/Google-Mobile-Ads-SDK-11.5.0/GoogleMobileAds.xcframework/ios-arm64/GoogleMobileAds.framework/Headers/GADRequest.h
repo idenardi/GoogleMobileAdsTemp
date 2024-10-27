@@ -7,8 +7,8 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADAdNetworkExtras.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GADAdNetworkExtras.h"
+#import "GoogleMobileAdsDefines.h"
 #import <UIKit/UIKit.h>
 
 /// Specifies optional parameters for ad requests.

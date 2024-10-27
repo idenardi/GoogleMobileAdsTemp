@@ -5,7 +5,7 @@
 //  Copyright 2016 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
+#import "GADAdLoader.h"
 
 /// Ad loader options for banner ads.
 @interface GAMBannerViewOptions : GADAdLoaderOptions

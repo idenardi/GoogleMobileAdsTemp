@@ -1,4 +1,4 @@
-#import <UserMessagingPlatform/UMPConsentInformation.h>
+#import "UMPConsentInformation.h"
 
 @class UMPConsentForm;
 

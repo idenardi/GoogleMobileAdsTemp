@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GoogleMobileAdsDefines.h"
 
 /// Requested ad format.
 typedef NS_ENUM(NSInteger, GADAdFormat) {

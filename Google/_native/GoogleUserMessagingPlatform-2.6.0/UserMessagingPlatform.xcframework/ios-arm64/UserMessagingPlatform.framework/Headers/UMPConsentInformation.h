@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-#import <UserMessagingPlatform/UMPRequestParameters.h>
+#import "UMPRequestParameters.h"
 
 /// SDK version string, of a form "major.minor.patch".
 extern NSString *_Nonnull const UMPVersionString;

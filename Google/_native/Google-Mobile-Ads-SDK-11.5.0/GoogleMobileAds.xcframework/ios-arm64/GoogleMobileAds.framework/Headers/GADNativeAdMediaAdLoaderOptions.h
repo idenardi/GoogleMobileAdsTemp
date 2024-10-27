@@ -5,8 +5,8 @@
 //  Copyright 2019 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
-#import <GoogleMobileAds/GADMediaAspectRatio.h>
+#import "GADAdLoader.h"
+#import "GADMediaAspectRatio.h"
 
 /// Ad loader options for native ad media settings.
 @interface GADNativeAdMediaAdLoaderOptions : GADAdLoaderOptions

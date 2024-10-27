@@ -5,9 +5,9 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/Mediation/GADMediationAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationAdConfiguration.h>
-#import <GoogleMobileAds/Mediation/GADMediationAdEventDelegate.h>
+#import "GADMediationAd.h"
+#import "GADMediationAdConfiguration.h"
+#import "GADMediationAdEventDelegate.h"
 #import <UIKit/UIKit.h>
 
 /// Rendered rewarded ad.

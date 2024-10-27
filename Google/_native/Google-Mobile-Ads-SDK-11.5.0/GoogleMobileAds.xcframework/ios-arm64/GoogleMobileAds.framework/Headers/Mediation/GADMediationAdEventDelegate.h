@@ -5,8 +5,8 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdReward.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "../GADAdReward.h"
+#import "../GoogleMobileAdsDefines.h"
 
 #import <UIKit/UIKit.h>
 

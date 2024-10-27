@@ -5,7 +5,7 @@
 //  Copyright 2016 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
+#import "GADAdLoader.h"
 
 /// Video ad options.
 @interface GADVideoOptions : GADAdLoaderOptions

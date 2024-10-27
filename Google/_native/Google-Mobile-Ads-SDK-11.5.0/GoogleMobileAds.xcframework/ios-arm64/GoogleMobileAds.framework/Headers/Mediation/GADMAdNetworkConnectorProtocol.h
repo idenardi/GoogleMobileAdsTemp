@@ -5,8 +5,8 @@
 //  Copyright 2011 Google. All rights reserved.
 //
 
-#import <GoogleMobileAds/Mediation/GADMediatedUnifiedNativeAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationAdRequest.h>
+#import "GADMediatedUnifiedNativeAd.h"
+#import "GADMediationAdRequest.h"
 
 @protocol GADMAdNetworkAdapter;
 

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADAdFormat.h>
+#import "../GADAdFormat.h"
 
 /// Mediation configuration set by the publisher on the AdMob UI.
 @interface GADMediationCredentials : NSObject

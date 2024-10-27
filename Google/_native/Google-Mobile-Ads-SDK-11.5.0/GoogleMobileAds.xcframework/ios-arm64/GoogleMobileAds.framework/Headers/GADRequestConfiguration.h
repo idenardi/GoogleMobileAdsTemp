@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GoogleMobileAdsDefines.h"
 
 /// Maximum ad content rating.
 typedef NSString *GADMaxAdContentRating NS_TYPED_ENUM;

@@ -5,11 +5,11 @@
 //  Copyright 2012 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
-#import <GoogleMobileAds/GADAdLoaderDelegate.h>
-#import <GoogleMobileAds/GADAppEventDelegate.h>
-#import <GoogleMobileAds/GADBannerView.h>
-#import <GoogleMobileAds/GADVideoController.h>
+#import "GADAdLoader.h"
+#import "GADAdLoaderDelegate.h"
+#import "GADAppEventDelegate.h"
+#import "GADBannerView.h"
+#import "GADVideoController.h"
 
 @class GAMBannerView;
 

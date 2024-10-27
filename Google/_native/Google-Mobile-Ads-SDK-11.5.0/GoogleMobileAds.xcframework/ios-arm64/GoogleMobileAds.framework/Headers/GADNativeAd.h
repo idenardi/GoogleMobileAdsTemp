@@ -6,17 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADAdChoicesView.h>
-#import <GoogleMobileAds/GADAdLoaderDelegate.h>
-#import <GoogleMobileAds/GADAdValue.h>
-#import <GoogleMobileAds/GADMediaContent.h>
-#import <GoogleMobileAds/GADMediaView.h>
-#import <GoogleMobileAds/GADMuteThisAdReason.h>
-#import <GoogleMobileAds/GADNativeAdAssetIdentifiers.h>
-#import <GoogleMobileAds/GADNativeAdDelegate.h>
-#import <GoogleMobileAds/GADNativeAdImage.h>
-#import <GoogleMobileAds/GADResponseInfo.h>
-#import <GoogleMobileAds/GADVideoController.h>
+#import "GADAdChoicesView.h"
+#import "GADAdLoaderDelegate.h"
+#import "GADAdValue.h"
+#import "GADMediaContent.h"
+#import "GADMediaView.h"
+#import "GADMuteThisAdReason.h"
+#import "GADNativeAdAssetIdentifiers.h"
+#import "GADNativeAdDelegate.h"
+#import "GADNativeAdImage.h"
+#import "GADResponseInfo.h"
+#import "GADVideoController.h"
 #import <UIKit/UIKit.h>
 
 /// Native ad. To request this ad type, pass GADAdLoaderAdTypeNative

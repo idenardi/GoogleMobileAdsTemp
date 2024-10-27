@@ -5,9 +5,9 @@
 //  Copyright 2020 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAppEventDelegate.h>
-#import <GoogleMobileAds/GADInterstitialAd.h>
-#import <GoogleMobileAds/GAMRequest.h>
+#import "GADAppEventDelegate.h"
+#import "GADInterstitialAd.h"
+#import "GAMRequest.h"
 
 @class GAMInterstitialAd;
 typedef void (^GAMInterstitialAdLoadCompletionHandler)(GAMInterstitialAd *_Nullable interstitialAd,

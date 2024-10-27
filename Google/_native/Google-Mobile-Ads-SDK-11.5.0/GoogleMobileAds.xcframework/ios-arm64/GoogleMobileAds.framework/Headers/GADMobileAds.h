@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-#import <GoogleMobileAds/GADAudioVideoManager.h>
-#import <GoogleMobileAds/GADInitializationStatus.h>
-#import <GoogleMobileAds/GADRequestConfiguration.h>
-#import <GoogleMobileAds/Mediation/GADVersionNumber.h>
+#import "GADAudioVideoManager.h"
+#import "GADInitializationStatus.h"
+#import "GADRequestConfiguration.h"
+#import "Mediation/GADVersionNumber.h"
 
 /// A block called with the initialization status when [GADMobileAds startWithCompletionHandler:]
 /// completes or times out.

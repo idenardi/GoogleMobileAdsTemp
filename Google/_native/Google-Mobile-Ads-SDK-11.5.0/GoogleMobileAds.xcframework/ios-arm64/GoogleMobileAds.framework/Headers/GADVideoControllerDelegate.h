@@ -5,7 +5,7 @@
 //  Copyright 2016 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADVideoController.h>
+#import "GADVideoController.h"
 
 /// The GADVideoControllerDelegate protocol defines methods that are called by the video controller
 /// object in response to the video events that occurred throughout the lifetime of the video

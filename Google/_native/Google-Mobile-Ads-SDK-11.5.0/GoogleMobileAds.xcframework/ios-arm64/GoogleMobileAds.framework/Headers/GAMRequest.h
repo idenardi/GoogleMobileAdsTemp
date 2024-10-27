@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADRequest.h>
+#import "GADRequest.h"
 
 /// Specifies optional parameters for ad requests.
 @interface GAMRequest : GADRequest

@@ -5,14 +5,14 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/Mediation/GADMediationAdEventDelegate.h>
-#import <GoogleMobileAds/Mediation/GADMediationAppOpenAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationBannerAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationInterstitialAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationNativeAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationRewardedAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationServerConfiguration.h>
-#import <GoogleMobileAds/Mediation/GADVersionNumber.h>
+#import "GADMediationAdEventDelegate.h"
+#import "GADMediationAppOpenAd.h"
+#import "GADMediationBannerAd.h"
+#import "GADMediationInterstitialAd.h"
+#import "GADMediationNativeAd.h"
+#import "GADMediationRewardedAd.h"
+#import "GADMediationServerConfiguration.h"
+#import "GADVersionNumber.h"
 #import <UIKit/UIKit.h>
 
 /// Called by the adapter after loading the banner ad or encountering an error. Returns an ad

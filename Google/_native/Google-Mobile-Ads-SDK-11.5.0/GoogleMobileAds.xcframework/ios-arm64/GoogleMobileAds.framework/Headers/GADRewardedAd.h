@@ -8,13 +8,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import <GoogleMobileAds/GADAdMetadata.h>
-#import <GoogleMobileAds/GADAdReward.h>
-#import <GoogleMobileAds/GADAdValue.h>
-#import <GoogleMobileAds/GADFullScreenContentDelegate.h>
-#import <GoogleMobileAds/GADRequest.h>
-#import <GoogleMobileAds/GADResponseInfo.h>
-#import <GoogleMobileAds/GADServerSideVerificationOptions.h>
+#import "GADAdMetadata.h"
+#import "GADAdReward.h"
+#import "GADAdValue.h"
+#import "GADFullScreenContentDelegate.h"
+#import "GADRequest.h"
+#import "GADResponseInfo.h"
+#import "GADServerSideVerificationOptions.h"
 
 @class GADRewardedAd;
 

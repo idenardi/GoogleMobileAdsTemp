@@ -5,10 +5,10 @@
 //  Copyright 2020 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdValue.h>
-#import <GoogleMobileAds/GADFullScreenContentDelegate.h>
-#import <GoogleMobileAds/GADRequest.h>
-#import <GoogleMobileAds/GADResponseInfo.h>
+#import "GADAdValue.h"
+#import "GADFullScreenContentDelegate.h"
+#import "GADRequest.h"
+#import "GADResponseInfo.h"
 #import <UIKit/UIKit.h>
 
 #pragma mark - App Open Ad

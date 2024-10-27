@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GoogleMobileAdsDefines.h"
 
 /// Response metadata for an individual ad network in an ad response.
 @interface GADAdNetworkResponseInfo : NSObject

@@ -5,10 +5,10 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdNetworkExtras.h>
-#import <GoogleMobileAds/GADAdSize.h>
-#import <GoogleMobileAds/Mediation/GADMediationAdConfiguration.h>
-#import <GoogleMobileAds/Mediation/GADMediationServerConfiguration.h>
+#import "../GADAdNetworkExtras.h"
+#import "../GADAdSize.h"
+#import "../Mediation/GADMediationAdConfiguration.h"
+#import "../Mediation/GADMediationServerConfiguration.h"
 
 /// Mediation configuration for a particular ad request.
 @interface GADRTBMediationSignalsConfiguration : NSObject

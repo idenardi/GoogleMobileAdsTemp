@@ -5,9 +5,9 @@
 //  Copyright 2011 Google. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
-#import <GoogleMobileAds/GADAdSize.h>
-#import <GoogleMobileAds/Mediation/GADMAdNetworkConnectorProtocol.h>
+#import "../GADAdLoader.h"
+#import "../GADAdSize.h"
+#import "GADMAdNetworkConnectorProtocol.h"
 #import <UIKit/UIKit.h>
 
 /// Subclasses should prefix their name with "GADMAdapter" example: GADMAdapterGoogleAdMobAds

@@ -5,9 +5,9 @@
 //  Copyright 2012 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdSize.h>
-#import <GoogleMobileAds/GADCustomEventBannerDelegate.h>
-#import <GoogleMobileAds/GADCustomEventRequest.h>
+#import "GADAdSize.h"
+#import "GADCustomEventBannerDelegate.h"
+#import "GADCustomEventRequest.h"
 #import <UIKit/UIKit.h>
 
 /// The banner custom event protocol. Your banner custom event handler must implement this protocol.

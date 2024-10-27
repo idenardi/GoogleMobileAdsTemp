@@ -5,8 +5,8 @@
 //  Copyright 2012 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADCustomEventInterstitialDelegate.h>
-#import <GoogleMobileAds/GADCustomEventRequest.h>
+#import "GADCustomEventInterstitialDelegate.h"
+#import "GADCustomEventRequest.h"
 #import <UIKit/UIKit.h>
 
 /// The interstitial custom event protocol. Your interstitial custom event handler must implement

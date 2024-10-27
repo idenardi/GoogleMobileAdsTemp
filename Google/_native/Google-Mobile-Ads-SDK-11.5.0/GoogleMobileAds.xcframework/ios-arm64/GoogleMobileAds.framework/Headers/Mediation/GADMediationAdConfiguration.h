@@ -5,9 +5,9 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdNetworkExtras.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-#import <GoogleMobileAds/Mediation/GADMediationServerConfiguration.h>
+#import "../GADAdNetworkExtras.h"
+#import "../GoogleMobileAdsDefines.h"
+#import "GADMediationServerConfiguration.h"
 #import <UIKit/UIKit.h>
 
 /// Provided by the Google Mobile Ads SDK for the adapter to render the ad. Contains 3PAS and other

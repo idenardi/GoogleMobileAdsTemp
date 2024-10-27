@@ -5,7 +5,7 @@
 //  Copyright 2015 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
+#import "GADAdLoader.h"
 
 /// Ad loader options for native ad image settings.
 @interface GADNativeAdImageAdLoaderOptions : GADAdLoaderOptions

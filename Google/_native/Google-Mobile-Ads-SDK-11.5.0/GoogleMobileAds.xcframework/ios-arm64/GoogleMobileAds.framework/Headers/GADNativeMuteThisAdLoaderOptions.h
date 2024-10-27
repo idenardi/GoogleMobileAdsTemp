@@ -5,7 +5,7 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
+#import "GADAdLoader.h"
 
 /// Mute This Ad options.
 @interface GADNativeMuteThisAdLoaderOptions : GADAdLoaderOptions

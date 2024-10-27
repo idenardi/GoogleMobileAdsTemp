@@ -5,8 +5,8 @@
 //  Copyright 2011 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdSizeDelegate.h>
-#import <GoogleMobileAds/GADBannerView.h>
+#import "GADAdSizeDelegate.h"
+#import "GADBannerView.h"
 
 /// A view that displays search ads.
 /// To show search ads:

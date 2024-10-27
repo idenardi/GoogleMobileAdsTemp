@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADNativeAd.h>
-#import <GoogleMobileAds/GADNativeAdUnconfirmedClickDelegate.h>
+#import "GADNativeAd.h"
+#import "GADNativeAdUnconfirmedClickDelegate.h"
 #import <UIKit/UIKit.h>
 
 @interface GADNativeAd (ConfirmedClick)

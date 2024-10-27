@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GoogleMobileAdsDefines.h"
 
 @protocol GADCustomEventBanner;
 

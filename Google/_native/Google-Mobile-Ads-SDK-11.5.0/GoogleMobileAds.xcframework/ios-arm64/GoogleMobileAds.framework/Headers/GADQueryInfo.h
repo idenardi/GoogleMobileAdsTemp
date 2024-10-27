@@ -5,8 +5,8 @@
 //  Copyright 2019 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdFormat.h>
-#import <GoogleMobileAds/GADRequest.h>
+#import "GADAdFormat.h"
+#import "GADRequest.h"
 
 @class GADQueryInfo;
 

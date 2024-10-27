@@ -5,7 +5,7 @@
 //  Copyright 2022 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADRequest.h>
+#import "../GADRequest.h"
 
 /// Ad string request extension.
 @interface GADRequest (AdString)

@@ -5,8 +5,8 @@
 //  Copyright 2016 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdChoicesPosition.h>
-#import <GoogleMobileAds/GADAdLoader.h>
+#import "GADAdChoicesPosition.h"
+#import "GADAdLoader.h"
 
 /// Ad loader options for configuring the view of native ads.
 @interface GADNativeAdViewAdOptions : GADAdLoaderOptions

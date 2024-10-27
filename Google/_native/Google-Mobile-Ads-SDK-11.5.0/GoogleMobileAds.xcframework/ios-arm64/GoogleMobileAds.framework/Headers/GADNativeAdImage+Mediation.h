@@ -5,7 +5,7 @@
 //  Copyright 2015 Google. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADNativeAdImage.h>
+#import "GADNativeAdImage.h"
 
 /// Provides additional GADNativeAdImage initializers.
 @interface GADNativeAdImage (MediationAdditions)

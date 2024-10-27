@@ -5,7 +5,7 @@
 //  Copyright 2019 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADVideoController.h>
+#import "GADVideoController.h"
 #import <UIKit/UIKit.h>
 
 /// Provides media content information. Interact with instances of this class on the main queue

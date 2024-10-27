@@ -5,7 +5,7 @@
 //  Copyright 2022 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdLoader.h>
+#import "GADAdLoader.h"
 
 /// Ad loader options for custom click gestures. Available for allowlisted publishers only. These
 /// options will be ignored for publishers not allowlisted.

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GoogleMobileAdsDefines.h"
 
 @protocol GADCustomEventInterstitial;
 

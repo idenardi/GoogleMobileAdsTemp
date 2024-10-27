@@ -8,11 +8,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import <GoogleMobileAds/GADAdValue.h>
-#import <GoogleMobileAds/GADFullScreenContentDelegate.h>
-#import <GoogleMobileAds/GADRequest.h>
-#import <GoogleMobileAds/GADResponseInfo.h>
-#import <GoogleMobileAds/GADServerSideVerificationOptions.h>
+#import "GADAdValue.h"
+#import "GADFullScreenContentDelegate.h"
+#import "GADRequest.h"
+#import "GADResponseInfo.h"
+#import "GADServerSideVerificationOptions.h"
 
 @class GADInterstitialAd;
 

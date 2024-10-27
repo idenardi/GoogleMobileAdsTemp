@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/Mediation/GADMediatedUnifiedNativeAd.h>
+#import "GADMediatedUnifiedNativeAd.h"
 
 /// Notifies the Google Mobile Ads SDK about the events performed by adapters. Adapters may perform
 /// some action (e.g. opening an in app browser or opening the iTunes store) when handling methods

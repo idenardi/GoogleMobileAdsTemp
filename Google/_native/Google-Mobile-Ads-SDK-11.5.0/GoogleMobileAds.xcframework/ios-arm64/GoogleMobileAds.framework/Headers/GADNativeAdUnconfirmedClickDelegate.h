@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADNativeAdAssetIdentifiers.h>
+#import "GADNativeAdAssetIdentifiers.h"
 
 @class GADNativeAd;
 

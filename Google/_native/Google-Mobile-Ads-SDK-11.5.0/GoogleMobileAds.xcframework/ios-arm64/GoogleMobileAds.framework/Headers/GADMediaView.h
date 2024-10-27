@@ -5,7 +5,7 @@
 //  Copyright 2019 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADMediaContent.h>
+#import "GADMediaContent.h"
 #import <UIKit/UIKit.h>
 
 /// Displays native ad media content.

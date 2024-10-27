@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GoogleMobileAdsDefines.h"
 
 /// Google AdMob Ads error domain.
 FOUNDATION_EXPORT NSString *_Nonnull const GADErrorDomain;

@@ -7,10 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import <GoogleMobileAds/GADAdNetworkExtras.h>
-#import <GoogleMobileAds/GADRequest.h>
-#import <GoogleMobileAds/GADRequestConfiguration.h>
-#import <GoogleMobileAds/Mediation/GADMEnums.h>
+#import "../GADAdNetworkExtras.h"
+#import "../GADRequest.h"
+#import "../GADRequestConfiguration.h"
+#import "GADMEnums.h"
 
 /// Provides information which can be used for making ad requests during mediation.
 @protocol GADMediationAdRequest <NSObject>

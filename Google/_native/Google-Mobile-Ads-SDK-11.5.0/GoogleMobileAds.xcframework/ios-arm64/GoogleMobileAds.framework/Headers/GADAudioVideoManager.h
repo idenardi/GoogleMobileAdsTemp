@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADAudioVideoManagerDelegate.h>
+#import "GADAudioVideoManagerDelegate.h"
 
 /// Provides audio and video notifications and configurations management.
 ///

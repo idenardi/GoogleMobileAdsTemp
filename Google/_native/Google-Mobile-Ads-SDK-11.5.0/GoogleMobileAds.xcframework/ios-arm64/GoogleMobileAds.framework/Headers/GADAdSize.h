@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import "GoogleMobileAdsDefines.h"
 #import <UIKit/UIKit.h>
 
 /// A valid GADAdSize is considered to be one of the predefined GADAdSize constants or a GADAdSize

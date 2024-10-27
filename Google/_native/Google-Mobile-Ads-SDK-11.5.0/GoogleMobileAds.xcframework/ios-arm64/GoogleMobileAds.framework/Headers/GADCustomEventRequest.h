@@ -5,7 +5,7 @@
 //  Copyright 2012 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADRequest.h>
+#import "GADRequest.h"
 #import <UIKit/UIKit.h>
 
 @class GADCustomEventExtras;

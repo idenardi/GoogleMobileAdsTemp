@@ -5,10 +5,10 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdSize.h>
-#import <GoogleMobileAds/Mediation/GADMediationAd.h>
-#import <GoogleMobileAds/Mediation/GADMediationAdConfiguration.h>
-#import <GoogleMobileAds/Mediation/GADMediationAdEventDelegate.h>
+#import "../GADAdSize.h"
+#import "GADMediationAd.h"
+#import "GADMediationAdConfiguration.h"
+#import "GADMediationAdEventDelegate.h"
 #import <UIKit/UIKit.h>
 
 /// Rendered banner ad. Provides a single subview to add to the banner view's view hierarchy.

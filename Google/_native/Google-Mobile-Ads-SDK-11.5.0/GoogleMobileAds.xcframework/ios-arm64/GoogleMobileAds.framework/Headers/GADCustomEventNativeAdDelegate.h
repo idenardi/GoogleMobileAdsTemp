@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GADCustomEventNativeAd.h>
-#import <GoogleMobileAds/Mediation/GADMediatedUnifiedNativeAd.h>
+#import "GADCustomEventNativeAd.h"
+#import "Mediation/GADMediatedUnifiedNativeAd.h"
 
 /// The delegate of the GADCustomEventNativeAd object must adopt the GADCustomEventNativeAdDelegate
 /// protocol. Methods in this protocol are used for native ad's custom event communication with the

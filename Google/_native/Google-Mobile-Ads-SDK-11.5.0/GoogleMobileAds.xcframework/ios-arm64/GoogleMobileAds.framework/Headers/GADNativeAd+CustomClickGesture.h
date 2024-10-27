@@ -5,7 +5,7 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADNativeAd.h>
+#import "GADNativeAd.h"
 
 @interface GADNativeAd (CustomClickGesture)
 

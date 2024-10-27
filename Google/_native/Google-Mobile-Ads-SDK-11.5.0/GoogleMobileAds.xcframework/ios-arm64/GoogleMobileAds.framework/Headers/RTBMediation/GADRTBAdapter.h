@@ -5,8 +5,8 @@
 //  Copyright 2018 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/Mediation/GADMediationAdapter.h>
-#import <GoogleMobileAds/RTBMediation/GADRTBRequestParameters.h>
+#import "../Mediation/GADMediationAdapter.h"
+#import "GADRTBRequestParameters.h"
 #import <UIKit/UIKit.h>
 
 /// Completion handler for signal generation. Returns either signals or an error object.

@@ -5,12 +5,12 @@
 //  Copyright 2011 Google LLC. All rights reserved.
 //
 
-#import <GoogleMobileAds/GADAdSize.h>
-#import <GoogleMobileAds/GADAdSizeDelegate.h>
-#import <GoogleMobileAds/GADAdValue.h>
-#import <GoogleMobileAds/GADBannerViewDelegate.h>
-#import <GoogleMobileAds/GADRequest.h>
-#import <GoogleMobileAds/GADResponseInfo.h>
+#import "GADAdSize.h"
+#import "GADAdSizeDelegate.h"
+#import "GADAdValue.h"
+#import "GADBannerViewDelegate.h"
+#import "GADRequest.h"
+#import "GADResponseInfo.h"
 #import <UIKit/UIKit.h>
 
 /// A view that displays banner ads. See https://developers.google.com/admob/ios/banner to get
