@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserMessagingPlatform", "Go
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Google", "Google", "{247F7152-B54C-4563-9942-E76DF0C54185}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{76E301EA-E7D5-4B9A-9CA0-741972490876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui.Google", "Maui.Google\Maui.Google.csproj", "{639E0268-9560-42C5-AD32-CFC2759CDB0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,12 @@ Global
 		{C86D8ED5-AB2F-4E27-AD95-A039C0F491F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C86D8ED5-AB2F-4E27-AD95-A039C0F491F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C86D8ED5-AB2F-4E27-AD95-A039C0F491F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639E0268-9560-42C5-AD32-CFC2759CDB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639E0268-9560-42C5-AD32-CFC2759CDB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639E0268-9560-42C5-AD32-CFC2759CDB0E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{639E0268-9560-42C5-AD32-CFC2759CDB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639E0268-9560-42C5-AD32-CFC2759CDB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639E0268-9560-42C5-AD32-CFC2759CDB0E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AD9201C1-1070-4496-B562-3686C6B7557A} = {247F7152-B54C-4563-9942-E76DF0C54185}
 		{C86D8ED5-AB2F-4E27-AD95-A039C0F491F9} = {247F7152-B54C-4563-9942-E76DF0C54185}
+		{639E0268-9560-42C5-AD32-CFC2759CDB0E} = {76E301EA-E7D5-4B9A-9CA0-741972490876}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9227C85-6EC7-4F09-A80B-0B403DE2BDF2}

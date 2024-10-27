@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-ios</TargetFramework>
     <Nullable>enable</Nullable>
@@ -11,13 +11,15 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
 
-  <!-- From https://developers.google.com/admob/ios/download version 11.10.0 -->
+  <!-- CocoaPods Specs https://github.com/CocoaPods/Specs/tree/master/Specs/5/9/a/Google-Mobile-Ads-SDK -->
+  <!-- From https://dl.google.com/dl/cpdc/f1d6e73c9053c2a2/Google-Mobile-Ads-SDK-11.5.0.tar.gz -->
   <ItemGroup>
-    <NativeReference Include="..\_native\GoogleMobileAdsSdkiOS-11.10.0\GoogleMobileAds.xcframework">
-      <Kind>Framework</Kind>
-      <SmartLink>True</SmartLink>
+    <NativeReference Include="..\_native\Google-Mobile-Ads-SDK-11.5.0\Frameworks\GoogleMobileAdsFramework\GoogleMobileAds.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
-      <Frameworks>AudioToolbox AVFoundation CFNetwork CoreGraphics CoreMedia CoreTelephony CoreVideo MediaPlayer MessageUI MobileCoreServices QuartzCore Security StoreKit SystemConfiguration</Frameworks>
+      <Frameworks>AudioToolbox AVFoundation CFNetwork CoreGraphics CoreMedia CoreTelephony CoreVideo JavaScriptCore MediaPlayer MessageUI MobileCoreServices Network QuartzCore Security StoreKit SystemConfiguration</Frameworks>
+      <WeakFrameworks>AdSupport JavaScriptCore SafariServices WebKit</WeakFrameworks>
       <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>
     </NativeReference>
   </ItemGroup>

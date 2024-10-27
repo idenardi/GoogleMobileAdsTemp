@@ -12,7 +12,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Deterministic>false</Deterministic>
 
-    <PackageVersion>11.10.0</PackageVersion>
+    <PackageVersion>2.6.0</PackageVersion>
     <PackageId>Maui.UserMessaingPlatform</PackageId>
   </PropertyGroup>
 
@@ -21,12 +21,15 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
 
-  <!-- From https://developers.google.com/admob/ios/download version 11.10.0 -->
+  <!-- CocoaPods Specs https://github.com/CocoaPods/Specs/tree/master/Specs/7/e/f/GoogleUserMessagingPlatform -->
+  <!-- From https://dl.google.com/dl/cpdc/c97382e8d357e866/GoogleUserMessagingPlatform-2.6.0.tar.gz -->
   <ItemGroup>
-    <NativeReference Include="..\_native\GoogleMobileAdsSdkiOS-11.10.0\UserMessagingPlatform.xcframework">
-      <Kind>Framework</Kind>
-      <SmartLink>True</SmartLink>
+    <NativeReference Include="..\_native\GoogleUserMessagingPlatform-2.6.0\Frameworks\Release\UserMessagingPlatform.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
+      <Frameworks>WebKit</Frameworks>
+      <WeakFrameworks>AdSupport</WeakFrameworks>
     </NativeReference>
   </ItemGroup>
 </Project>
