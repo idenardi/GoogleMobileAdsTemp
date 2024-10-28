@@ -1,4 +1,4 @@
-#import "UMPDebugSettings.h
+#import "UMPDebugSettings.h"
 
 /// Parameters sent on updates to user consent info.
 @interface UMPRequestParameters : NSObject <NSCopying>
