@@ -133,7 +133,6 @@ namespace Maui.Google.MobileAds
     }
 
     #region Extensions
-
     [Preserve(AllMembers = true)]
     [System.Runtime.Versioning.SupportedOSPlatform("ios11.0")]
     public partial class AdSizeCons
@@ -414,5 +413,5 @@ namespace Maui.Google.MobileAds
     {
         public static readonly string GADGoogleAdMobNetworkName = "GoogleAdMobAds";
     }
-    #endregions
+    #endregion
 }
