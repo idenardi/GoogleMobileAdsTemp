@@ -681,6 +681,7 @@ namespace Maui.Google.MobileAds
         bool IsTesting { get; }
     }
 
+    [Protocol, Model]
     [BaseType(typeof(NSObject),
         Name = "GADCustomEventBanner",
         Delegates = new string[] { "Delegate" },
@@ -770,6 +771,7 @@ namespace Maui.Google.MobileAds
         void WillLeaveApplication(CustomEventInterstitial customEvent);
     }
 
+    [Protocol, Model]
     [BaseType(typeof(NSObject),
         Name = "GADCustomEventInterstitial",
         Delegates = new string[] { "Delegate" },
@@ -799,6 +801,7 @@ namespace Maui.Google.MobileAds
     }
 
     // @protocol GADCustomEventNativeAd <NSObject>
+    [Protocol, Model]
     [BaseType(typeof(NSObject),
         Name = "GADCustomEventNativeAd",
         Delegates = new string[] { "Delegate" },

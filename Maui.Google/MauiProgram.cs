@@ -1,4 +1,5 @@
 ﻿using Maui.Google.Services;
+using Maui.Google.Views;
 using Microsoft.Extensions.Logging;
 
 namespace Maui.Google
@@ -14,6 +15,10 @@ namespace Maui.Google
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                })
+                .ConfigureMauiHandlers(h =>
+                {
+                    h.AddHandler(typeof(AdBannerView), typeof(AdBannerViewHandler));
                 });
 
 #if DEBUG
