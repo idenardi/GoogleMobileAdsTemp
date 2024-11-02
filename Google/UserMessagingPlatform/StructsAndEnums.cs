@@ -3,7 +3,15 @@ using ObjCRuntime;
 
 namespace Maui.Google.UserMessagingPlatform
 {
-	[Native]
+    [Native]
+    public enum DebugGeography : long
+    {
+        Disabled = 0,
+        Eea = 1,
+        NotEEA = 2
+    }
+
+    [Native]
 	public enum ConsentStatus : long
 	{
 		Unknown = 0,
@@ -26,14 +34,6 @@ namespace Maui.Google.UserMessagingPlatform
 		Unknown = 0,
 		Required = 1,
 		NotRequired = 2
-	}
-
-	[Native]
-	public enum DebugGeography : long
-	{
-		Disabled = 0,
-		Eea = 1,
-		NotEEA = 2
 	}
 
 	[Native]

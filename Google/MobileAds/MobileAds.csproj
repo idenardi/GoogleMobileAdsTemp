@@ -6,15 +6,48 @@
     <IsBindingProject>true</IsBindingProject>
   </PropertyGroup>
 
+  <!-- build nuget in visual studio -->
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+
+    <PackageId>Maui.Google.MobileAds.iOS</PackageId>
+    <Title>Google Mobile Ads iOS Library</Title>
+    <Summary>C# bindings for Google Mobile Ads iOS Library</Summary>
+    <Description>C# bindings for Google Mobile Ads iOS Library</Description>
+    <PackageTags>.net maui, ios, MobileAds, AdMob</PackageTags>
+
+    <Authors>Ivan Denardi</Authors>
+    <Owners>idenardi</Owners>
+    <Copyright>Copyright (c) 2024. Ivan Denardi</Copyright>
+
+    <!--<PackageIcon>icon.png</PackageIcon>-->
+    <PackageProjectUrl>https://github.com/idenardi/GoogleMobileAdsTemp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/idenardi/GoogleMobileAdsTemp</RepositoryUrl>
+    <PackageReleaseNotes>See: https://github.com/idenardi/GoogleMobileAdsTemp</PackageReleaseNotes>
+    <PackageLicenseFile>License.md</PackageLicenseFile>
+    <!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageVersion>11.5.0</PackageVersion>
+  </PropertyGroup>
+  
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
 
+  <!-- Package additions -->
+  <ItemGroup>
+    <None Include="License.md" Pack="True" PackagePath="License.md" />
+    <!--<None Include="..\..\art\icon.png" PackagePath="icon.png" Pack="true" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />-->
+  </ItemGroup>
+
   <!-- CocoaPods Specs https://github.com/CocoaPods/Specs/tree/master/Specs/5/9/a/Google-Mobile-Ads-SDK -->
   <!-- From https://dl.google.com/dl/cpdc/f1d6e73c9053c2a2/Google-Mobile-Ads-SDK-11.5.0.tar.gz -->
   <ItemGroup>
-    <NativeReference Include="..\_native\Google-Mobile-Ads-SDK-11.5.0\Frameworks\GoogleMobileAdsFramework\GoogleMobileAds.xcframework">
+    <NativeReference Include="..\_native\Google-Mobile-Ads-SDK-11.5.0\GoogleMobileAds.xcframework">
       <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
@@ -23,7 +56,5 @@
       <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>
     </NativeReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Extensions.cs" />
-  </ItemGroup>
+
 </Project>

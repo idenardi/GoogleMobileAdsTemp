@@ -3,52 +3,43 @@ using System.Collections.Generic;
 
 using Foundation;
 using ObjCRuntime;
+using UIKit;
 
 namespace Maui.Google.UserMessagingPlatform
 {
-    // typedef void (^UMPConsentFormLoadCompletionHandler)(UMPConsentForm * _Nullable, NSError * _Nullable);
-    delegate void ConsentFormLoadCompletionHandler([NullAllowed] ConsentForm consentForm, [NullAllowed] NSError error);
+    // @interface UMPDebugSettings : NSObject <NSCopying>
+    [BaseType(typeof(NSObject), Name = "UMPDebugSettings")]
+    interface DebugSettings : INSCopying
+    {
+        // @property (copy, nonatomic) NSArray<NSString *> * _Nullable testDeviceIdentifiers;
+        [NullAllowed, Export("testDeviceIdentifiers", ArgumentSemantic.Copy)]
+        string[] TestDeviceIdentifiers { get; set; }
 
-    // typedef void (^UMPConsentFormPresentCompletionHandler)(NSError * _Nullable);
-    delegate void ConsentFormPresentCompletionHandler([NullAllowed] NSError error);
+        // @property (nonatomic) UMPDebugGeography geography;
+        [Export("geography", ArgumentSemantic.Assign)]
+        DebugGeography Geography { get; set; }
+    }
+
+    // @interface UMPRequestParameters : NSObject <NSCopying>
+    [BaseType(typeof(NSObject), Name = "UMPRequestParameters")]
+    interface RequestParameters : INSCopying
+    {
+        // @property (nonatomic) BOOL tagForUnderAgeOfConsent;
+        [Export("tagForUnderAgeOfConsent")]
+        bool TagForUnderAgeOfConsent { get; set; }
+
+        // @property (copy, nonatomic) UMPDebugSettings * _Nullable debugSettings;
+        [NullAllowed, Export("debugSettings", ArgumentSemantic.Copy)]
+        DebugSettings DebugSettings { get; set; }
+    }
 
     // typedef void (^UMPConsentInformationUpdateCompletionHandler)(NSError * _Nullable);
     delegate void ConsentInformationUpdateCompletionHandler([NullAllowed] NSError error);
-
-    // @interface UMPConsentForm
-    [DisableDefaultCtor]
-    [BaseType(typeof(NSObject), Name = "UMPConsentForm")]
-    interface ConsentForm
-    {
-        // +(void)loadWithCompletionHandler:(UMPConsentFormLoadCompletionHandler _Nonnull)completionHandler;
-        [Static]
-        [Export("loadWithCompletionHandler:")]
-        void Load(ConsentFormLoadCompletionHandler completionHandler);
-
-        // +(void)loadAndPresentIfRequiredFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
-        [Static]
-        [Export("loadAndPresentIfRequiredFromViewController:completionHandler:")]
-        void LoadAndPresentIfRequired(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
-
-        // +(void)presentPrivacyOptionsFormFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
-        [Static]
-        [Export("presentPrivacyOptionsFormFromViewController:completionHandler:")]
-        void PresentPrivacyOptionsForm(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
-
-        // -(void)presentFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
-        [Export("presentFromViewController:completionHandler:")]
-        void Present(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
-    }
 
     // @interface UMPConsentInformation : NSObject
     [BaseType(typeof(NSObject), Name = "UMPConsentInformation")]
     interface ConsentInformation
     {
-        // @property (readonly, nonatomic, class) UMPConsentInformation * _Nonnull sharedInstance;
-        [Static]
-        [Export("sharedInstance")]
-        ConsentInformation SharedInstance { get; }
-
         // extern NSString *const _Nonnull UMPVersionString;
         [Field("UMPVersionString", "__Internal")]
         NSString UMPVersionString { get; }
@@ -56,6 +47,11 @@ namespace Maui.Google.UserMessagingPlatform
         // extern NSErrorDomain  _Nonnull const UMPErrorDomain;
         [Field("UMPErrorDomain", "__Internal")]
         NSString UMPErrorDomain { get; }
+
+        // @property (readonly, nonatomic, class) UMPConsentInformation * _Nonnull sharedInstance;
+        [Static]
+        [Export("sharedInstance")]
+        ConsentInformation SharedInstance { get; }
 
         // @property (readonly, nonatomic) UMPConsentStatus consentStatus;
         [Export("consentStatus")]
@@ -82,29 +78,34 @@ namespace Maui.Google.UserMessagingPlatform
         void Reset();
     }
 
-    // @interface UMPDebugSettings : NSObject <NSCopying>
-    [BaseType(typeof(NSObject), Name = "UMPDebugSettings")]
-    interface DebugSettings : INSCopying
+    // typedef void (^UMPConsentFormLoadCompletionHandler)(UMPConsentForm * _Nullable, NSError * _Nullable);
+    delegate void ConsentFormLoadCompletionHandler([NullAllowed] ConsentForm consentForm, [NullAllowed] NSError error);
+
+    // typedef void (^UMPConsentFormPresentCompletionHandler)(NSError * _Nullable);
+    delegate void ConsentFormPresentCompletionHandler([NullAllowed] NSError error);
+
+    // @interface UMPConsentForm
+    [DisableDefaultCtor]
+    [BaseType(typeof(NSObject), Name = "UMPConsentForm")]
+    interface ConsentForm
     {
-        // @property (copy, nonatomic) NSArray<NSString *> * _Nullable testDeviceIdentifiers;
-        [NullAllowed, Export("testDeviceIdentifiers", ArgumentSemantic.Copy)]
-        string[] TestDeviceIdentifiers { get; set; }
+        // +(void)loadWithCompletionHandler:(UMPConsentFormLoadCompletionHandler _Nonnull)completionHandler;
+        [Static]
+        [Export("loadWithCompletionHandler:")]
+        void Load(ConsentFormLoadCompletionHandler completionHandler);
 
-        // @property (nonatomic) UMPDebugGeography geography;
-        [Export("geography", ArgumentSemantic.Assign)]
-        DebugGeography Geography { get; set; }
-    }
+        // +(void)loadAndPresentIfRequiredFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
+        [Static]
+        [Export("loadAndPresentIfRequiredFromViewController:completionHandler:")]
+        void LoadAndPresentIfRequired(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
 
-    // @interface UMPRequestParameters : NSObject <NSCopying>
-    [BaseType(typeof(NSObject), Name = "UMPRequestParameters")]
-    interface RequestParameters : INSCopying
-    {
-        // @property (nonatomic) BOOL tagForUnderAgeOfConsent;
-        [Export("tagForUnderAgeOfConsent")]
-        bool TagForUnderAgeOfConsent { get; set; }
+        // +(void)presentPrivacyOptionsFormFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
+        [Static]
+        [Export("presentPrivacyOptionsFormFromViewController:completionHandler:")]
+        void PresentPrivacyOptionsForm(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
 
-        // @property (copy, nonatomic) UMPDebugSettings * _Nullable debugSettings;
-        [NullAllowed, Export("debugSettings", ArgumentSemantic.Copy)]
-        DebugSettings DebugSettings { get; set; }
+        // -(void)presentFromViewController:(id)viewController completionHandler:(UMPConsentFormPresentCompletionHandler _Nullable)completionHandler;
+        [Export("presentFromViewController:completionHandler:")]
+        void Present(NSObject viewController, [NullAllowed] ConsentFormPresentCompletionHandler completionHandler);
     }
 }
